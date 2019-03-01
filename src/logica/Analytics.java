@@ -1,6 +1,7 @@
 package logica;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class Analytics {
 
@@ -24,9 +25,12 @@ public class Analytics {
 		for(int j = 0; j < array.length; j++) {
 			if(array[j].length() == largo) {
 				lista.add(array[j]);
+				Collections.sort(lista);	
 				dato = lista.toArray(dato);
 			}
 		}
+		
+		//System.out.println(dato[0].toString() + " " + dato[1].toString());
 
 		return dato;
 	}
@@ -53,6 +57,7 @@ public class Analytics {
 		for(int j = 0; j < array.length; j++) {
 			if(array[j].length() == corto) {
 				lista.add(array[j]);
+				Collections.sort(lista);
 				dato = lista.toArray(dato);
 			}
 		}

@@ -12,7 +12,7 @@ public class Test_Analytics {
 		String palabras1 = "yo vivo en casa";
 		String palabras2 = "casa casota casototota";
 		
-		String [] esperado1 = {"vivo", "casa"};
+		String [] esperado1 = {"casa", "vivo"};
 		String [] esperado2 = {"casototota"};
 		
 		String[] result1 = Analytics.masLarga(palabras1);
@@ -28,7 +28,7 @@ public class Test_Analytics {
 		String palabras1 = "yo vivo en casa";
 		String palabras2 = "casa casota casototota";
 		
-		String [] esperado1 = {"yo", "en"};
+		String [] esperado1 = {"en", "yo"};
 		String [] esperado2 = {"casa"};
 		
 		String[] result1 = Analytics.masCorta(palabras1);
@@ -36,6 +36,28 @@ public class Test_Analytics {
 		
 		assertArrayEquals(esperado1, result1);
 		assertArrayEquals(esperado2, result2);	
+	}
+	
+	@Test
+	public void test_MasLargaAlfabeticamente() {
+		
+		String palabras1 = "yo vivo en casa";
+		String [] esperado1 = {"casa", "vivo"};
+		
+		String[] result1 = Analytics.masLarga(palabras1);
+		
+		assertArrayEquals(esperado1, result1);	
+	}
+	
+	@Test
+	public void test_MasCortaAlfabeticamente() {
+		
+		String palabras1 = "yo vivo en casa";
+		String [] esperado1 = {"en", "yo"};
+		
+		String[] result1 = Analytics.masCorta(palabras1);
+		
+		assertArrayEquals(esperado1, result1);	
 	}
 	
 }
