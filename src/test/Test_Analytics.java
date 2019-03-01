@@ -1,6 +1,8 @@
 package test;
 
 import static org.junit.Assert.assertArrayEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 import org.junit.jupiter.api.Test;
 import logica.Analytics;
 
@@ -58,6 +60,16 @@ public class Test_Analytics {
 		String[] result1 = Analytics.masCorta(palabras1);
 		
 		assertArrayEquals(esperado1, result1);	
+	}
+	
+	@Test
+	public void test_PrimeraMasLarga() {
+		
+		String palabras1 = "yo vivo en casa";		
+		
+		String result1 = Analytics.primeraMasLarga(palabras1);
+		
+		assertEquals("vivo", result1);
 	}
 	
 }

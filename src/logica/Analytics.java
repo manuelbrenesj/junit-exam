@@ -25,7 +25,7 @@ public class Analytics {
 		for(int j = 0; j < array.length; j++) {
 			if(array[j].length() == largo) {
 				lista.add(array[j]);
-				Collections.sort(lista);	
+				Collections.sort(lista);
 				dato = lista.toArray(dato);
 			}
 		}
@@ -63,6 +63,20 @@ public class Analytics {
 		}
 		
 		return dato;
+	}
+	
+	public static String primeraMasLarga(String palabras) {
+		
+		String[] array = palabras.split(" ");
+		String masLarga = "";
+		
+		for(int i = 0; i < array.length; i++) {
+			if(array[i].length() > masLarga.length()) {		
+				masLarga = array[i];	
+			}
+		}
+
+		return masLarga;
 	}
 }
 
